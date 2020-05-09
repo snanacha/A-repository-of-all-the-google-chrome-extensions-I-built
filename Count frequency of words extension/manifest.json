@@ -1,0 +1,28 @@
+{
+	//Required
+	"name":"Count words",
+	"version":"1.0",
+	"manifest_version":2,
+
+	"content_scripts":[
+		{
+			"matches":["<all_urls>"],
+			"js":["content.js"]
+		}],
+	//Recommended
+	"description":"You can add your own custom backgrounds",
+	//"icons":{
+	//	"128":"floral.png"
+	//},
+
+	//Type of action is must:browser, pge or none
+	//I'm using browser action - for all pages
+	"browser_action":{
+		"default_title":"Count words ",
+		"default_popup":"popup.html"
+	},
+	//intention of my app is to be mentioned here
+	//What will I access from the user
+	"permissions":["tabs"]
+
+}
